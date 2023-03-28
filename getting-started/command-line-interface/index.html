@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../../The_GeneWeaver_Web_Application/">
+        <link rel="prev" href="../web-application/">
       
       
-        <link rel="next" href="../What_Is_a_GeneSet%3F/">
+        <link rel="next" href="../running-tools-locally/">
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/GW2-logo.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.13">
     
     
       
-        <title>What Is a Gene? - GeneWeaver</title>
+        <title>Command Line Interface - GeneWeaver</title>
       
     
     
@@ -72,6 +72,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#installation" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -100,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              What Is a Gene?
+              Command Line Interface
             
           </span>
         </div>
@@ -244,21 +249,6 @@
 
   
   
-  
-    <li class="md-nav__item">
-      <a href="../../The_GeneWeaver_Web_Application/" class="md-nav__link">
-        The GeneWeaver Web Application
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
     
   
   
@@ -270,9 +260,15 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
       
       
+        
+          
+            
+          
+        
+          
         
           
         
@@ -280,17 +276,39 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-          GeneWeaver Concepts
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Getting Started</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_3">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          GeneWeaver Concepts
+          Getting Started
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web-application/" class="md-nav__link">
+        Web Application
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -305,9 +323,72 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Command Line Interface
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        What Is a Gene?
+        Command Line Interface
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-pypi" class="md-nav__link">
+    From PyPI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-source" class="md-nav__link">
+    From Source
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -320,8 +401,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../What_Is_a_GeneSet%3F/" class="md-nav__link">
-        What Is a GeneSet?
+      <a href="../running-tools-locally/" class="md-nav__link">
+        Running Tools Locally
       </a>
     </li>
   
@@ -349,9 +430,7 @@
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
       
       
         
@@ -359,22 +438,90 @@
             
           
         
+          
+        
+          
+        
+          
+        
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../Getting_Started/">Getting Started</a>
+          <a href="../../concepts/">Concepts</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_4">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Getting Started
+          Concepts
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/genes-and-genesets/" class="md-nav__link">
+        Genes and GeneSets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/geneweaver-data-model/" class="md-nav__link">
+        Geneweaver Data Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/geneweaver-data/" class="md-nav__link">
+        External Source Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/package-based-architecture/" class="md-nav__link">
+        Package Based Architecture
+      </a>
+    </li>
+  
+
             
           
         </ul>
@@ -398,9 +545,7 @@
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
       
       
         
@@ -416,12 +561,161 @@
         
           
         
+          
+        
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../Reference/">Reference</a>
+          <a href="../../tutorial/">Tutorial</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/accessing-geneweaver-data/" class="md-nav__link">
+        Accessing Geneweaver Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/running-a-local-database/" class="md-nav__link">
+        Running a Local Database
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/creating-new-tools/" class="md-nav__link">
+        Creating New Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/testing-new-tools/" class="md-nav__link">
+        Testing New Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/exploring-data-in-javascript/" class="md-nav__link">
+        Exploring Data in Javascript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/creating-a-new-documentation-site/" class="md-nav__link">
+        Creating a New Documentation Site
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../reference/">Reference</a>
           
             <label for="__nav_5">
               <span class="md-nav__icon md-icon"></span>
@@ -444,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Reference/Available_Packages/" class="md-nav__link">
+      <a href="../../reference/available-packages/" class="md-nav__link">
         Available Packages
       </a>
     </li>
@@ -458,8 +752,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Reference/Contribution_Guide/" class="md-nav__link">
-        Contribution Guide
+      <a href="../../reference/available-tools/" class="md-nav__link">
+        Available Tools
       </a>
     </li>
   
@@ -472,7 +766,21 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Reference/Development_Guide/" class="md-nav__link">
+      <a href="../../reference/contributing-guide/" class="md-nav__link">
+        Contributing Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/development-guide/" class="md-nav__link">
         Development Guide
       </a>
     </li>
@@ -486,8 +794,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Reference/ReST_API_Reference/" class="md-nav__link">
-        ReST API Reference
+      <a href="../../reference/restful-api/" class="md-nav__link">
+        ReST API
       </a>
     </li>
   
@@ -518,6 +826,55 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-pypi" class="md-nav__link">
+    From PyPI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-source" class="md-nav__link">
+    From Source
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -534,9 +891,32 @@
   
 
 
-  <h1>What Is a Gene?</h1>
+  <h1>Command Line Interface</h1>
 
-
+<p>Geneweaver provides a command line interface for interacting with the GeneWeaver web 
+application. The command line interface is a python package called <code>geneweaver-client</code>. </p>
+<p>The package is available on <a href="https://pypi.org/project/geneweaver-client/">PyPI</a>.</p>
+<h2 id="installation">Installation</h2>
+<h3 id="requirements">Requirements</h3>
+<p>The <code>geneweaver-client</code> package requires python 3.7 or greater.</p>
+<h3 id="from-pypi">From PyPI</h3>
+<p>To install the <code>geneweaver-client</code> package from PyPI, run the following command:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>geneweaver-client
+</code></pre></div>
+<h3 id="from-source">From Source</h3>
+<p>To install the <code>geneweaver-client</code> package from source, run the following commands:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will need to have <a href="https://python-poetry.org/">poetry</a> installed.</p>
+</div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:bergsalex/geneweaver-client.git
+<span class="nb">cd</span><span class="w"> </span>geneweaver-client
+poetry<span class="w"> </span>install
+</code></pre></div>
+<h2 id="usage">Usage</h2>
+<div class="admonition warning">
+<p class="admonition-title">Coming Soon</p>
+</div>
 
 
 
@@ -555,6 +935,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../web-application/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Web Application" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Previous
+                </span>
+                Web Application
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../running-tools-locally/" class="md-footer__link md-footer__link--next" aria-label="Next: Running Tools Locally" rel="next">
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Next
+                </span>
+                Running Tools Locally
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -571,7 +989,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.indexes", "search.suggest", "search.highlight", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.footer", "search.suggest", "search.highlight", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
