@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#poetry-python" class="md-skip">
+        <a href="#project-dependencies" class="md-skip">
           Skip to content
         </a>
       
@@ -739,9 +739,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#poetry-python" class="md-nav__link">
-    Poetry &amp; Python
+  <a href="#project-dependencies" class="md-nav__link">
+    Project Dependencies
   </a>
+  
+    <nav class="md-nav" aria-label="Project Dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-version" class="md-nav__link">
+    Python Version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poetry" class="md-nav__link">
+    Poetry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytest" class="md-nav__link">
+    PyTest
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -806,9 +833,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#poetry-python" class="md-nav__link">
-    Poetry &amp; Python
+  <a href="#project-dependencies" class="md-nav__link">
+    Project Dependencies
   </a>
+  
+    <nav class="md-nav" aria-label="Project Dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-version" class="md-nav__link">
+    Python Version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poetry" class="md-nav__link">
+    Poetry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytest" class="md-nav__link">
+    PyTest
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -839,8 +893,25 @@
 
   <h1>Development Guide</h1>
 
-<h3 id="poetry-python">Poetry &amp; Python</h3>
-<h3 id="package-based-architecture">Package Based Architecture</h3>
+<h2 id="project-dependencies">Project Dependencies</h2>
+<h3 id="python-version">Python Version</h3>
+<p>All packages in the <code>geneweaver-*</code> ecosystem depend on Python version 3.9 or higher. </p>
+<p>If you need to manage multiple version of python on your development machine, we 
+recommend using <a href="https://github.com/pyenv/pyenv">pyenv</a> to manage your python versions.</p>
+<div class="admonition warning">
+<p class="admonition-title">Support for Python 3.7</p>
+<p>It's possible that some of the packages in the <code>geneweaver-*</code> ecosystem will work
+with Python 3.7, but this is not guaranteed, and is not tested.</p>
+</div>
+<h3 id="poetry">Poetry</h3>
+<p>All packages in the <code>geneweaver-*</code> ecosystem use <a href="https://python-poetry.org/">poetry</a>
+to manage dependencies and build packages. </p>
+<p>The <a href="https://python-poetry.org/docs/#installation">Python Poetry Documentation</a>
+maintains a list of installation instructions for all major operating systems.</p>
+<h3 id="pytest">PyTest</h3>
+<p>All packages in the <code>geneweaver-*</code> ecosystem use 
+<a href="https://docs.pytest.org/en/7.2.x/">PyTest</a> as their test runner.</p>
+<h2 id="package-based-architecture">Package Based Architecture</h2>
 
 
 

@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#code-style" class="md-skip">
+        <a href="#tests" class="md-skip">
           Skip to content
         </a>
       
@@ -725,13 +725,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#code-style" class="md-nav__link">
-    Code Style
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#tests" class="md-nav__link">
     Tests
   </a>
@@ -739,9 +732,50 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#documentation" class="md-nav__link">
-    Documentation
+  <a href="#code-style" class="md-nav__link">
+    Code Style
   </a>
+  
+    <nav class="md-nav" aria-label="Code Style">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docstrings" class="md-nav__link">
+    Docstrings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-annotations" class="md-nav__link">
+    Type Annotations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-linting-ruff-and-mypy" class="md-nav__link">
+    Code Linting - Ruff and MyPy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-formatting-black-and-ruff" class="md-nav__link">
+    Code Formatting - Black and Ruff
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development-process" class="md-nav__link">
+    Development Process
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -813,13 +847,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#code-style" class="md-nav__link">
-    Code Style
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#tests" class="md-nav__link">
     Tests
   </a>
@@ -827,9 +854,50 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#documentation" class="md-nav__link">
-    Documentation
+  <a href="#code-style" class="md-nav__link">
+    Code Style
   </a>
+  
+    <nav class="md-nav" aria-label="Code Style">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docstrings" class="md-nav__link">
+    Docstrings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-annotations" class="md-nav__link">
+    Type Annotations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-linting-ruff-and-mypy" class="md-nav__link">
+    Code Linting - Ruff and MyPy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-formatting-black-and-ruff" class="md-nav__link">
+    Code Formatting - Black and Ruff
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development-process" class="md-nav__link">
+    Development Process
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -853,9 +921,82 @@
 
   <h1>Contributing Guide</h1>
 
-<h2 id="code-style">Code Style</h2>
+<p>This document outlines the baseline contribution guidelines for all packages in the
+<code>geneweaver-*</code> ecosystem. These guidelines are intended to concretely define what 
+processes and practices a developer should follow when contributing to the project for
+their contribution to be accepted.</p>
 <h2 id="tests">Tests</h2>
-<h2 id="documentation">Documentation</h2>
+<p>GeneWeaver is a community driven project with a variety of contributors. The project
+relies on automated tests to allow developers to be confident that their changes do not
+break existing functionality. </p>
+<p>All contributed code should be tested. Test code coverage is calculated using the 
+<code>pytest-cov</code> module. The minimum code coverage threshold varies per module. Code
+should be <strong>well tested</strong> through a variety of tests, not just a high code coverage
+percentage.</p>
+<p>The <code>geneweaver-testing</code> module provides baseline automated tests and fixtures, as do
+the other <code>geneweaver-*</code> modules. The testing tools in these modules can be utilized
+to make writing tests for your code as straightforward as possible.</p>
+<h2 id="code-style">Code Style</h2>
+<p>In order to make the code in the <code>geneweaver-*</code> ecosystem consistent, and to make it 
+as easy as possible to contribute to the codebase, we have adopted a set of code style
+standards and auto-formatting tools. </p>
+<h3 id="docstrings">Docstrings</h3>
+<p>All PyTest Tests and PyTest Fixtures should have docstrings. The docstrings should
+follow the <a href="https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings">Google Style</a>
+for docstrings.</p>
+<h3 id="type-annotations">Type Annotations</h3>
+<p>All PyTest Tests and PyTest Fixtures should have type annotations. MyPy will be used
+to check type annotations.</p>
+<h3 id="code-linting-ruff-and-mypy">Code Linting - Ruff and MyPy</h3>
+<p>All code in the <code>geneweaver-*</code> ecosystem is linted using 
+<a href="https://github.com/charliermarsh/ruff">ruff</a> and <a href="https://mypy-lang.org/">mypy</a>.</p>
+<p>GeneWeaver strives to use the most comprehensive set of linting rules reasonably 
+available, to both ensure that the code is as clean as possible, and to provide
+as much feedback as possible to the developer.</p>
+<details class="abstract">
+<summary>Ruleset Configuration for <code>ruff</code>:</summary>
+<div class="highlight"><pre><span></span><code><span class="k">[tool.ruff]</span>
+<span class="n">select</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="c1"># Pyflakes Ruleset</span>
+<span class="w">    </span><span class="s">&quot;E&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="c1"># Pycodestyle Ruleset (E - Error, W - Warning)</span>
+<span class="w">    </span><span class="s">&quot;F&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;W&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="c1"># McCabe Complexity</span>
+<span class="w">    </span><span class="s">&quot;C90&quot;</span><span class="p">,</span>
+<span class="c1"># pep8-naming</span>
+<span class="w">    </span><span class="s">&quot;N&quot;</span><span class="p">,</span>
+<span class="c1"># flake8-builtins</span>
+<span class="w">    </span><span class="s">&quot;A&quot;</span><span class="p">,</span>
+<span class="c1"># flake8-bugbear</span>
+<span class="w">    </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="c1"># flake8-annotations</span>
+<span class="w">    </span><span class="s">&quot;ANN&quot;</span><span class="p">,</span>
+<span class="c1"># flake8-pytest-stlye    </span>
+<span class="w">    </span><span class="s">&quot;PT&quot;</span><span class="p">,</span>
+<span class="c1"># pydocstyle</span>
+<span class="w">    </span><span class="s">&quot;D&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="c1"># Isort</span>
+<span class="w">    </span><span class="s">&quot;I&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="c1"># eradicate</span>
+<span class="w">    </span><span class="s">&quot;ERA&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="c1"># pandas-vet</span>
+<span class="w">    </span><span class="s">&quot;PD&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="c1"># NumPy-specific rules</span>
+<span class="w">    </span><span class="s">&quot;NPY&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="p">]</span>
+</code></pre></div>
+<p>You can find comprehensive documentation on theses rulesets in the
+<a href="https://beta.ruff.rs/docs/rules/">ruff documentation</a></p>
+</details>
+<h3 id="code-formatting-black-and-ruff">Code Formatting - Black and Ruff</h3>
+<p>All code in the <code>geneweaver-*</code> ecosystem is formatted using 
+<a href="https://github.com/psf/black">black</a> and <a href="https://pycqa.github.io/isort/">isort</a>.</p>
+<h3 id="development-process">Development Process</h3>
+<p>Before submitting a pull request, please run the following commands to check your code:
+<div class="highlight"><pre><span></span><code>ruff<span class="w"> </span>check<span class="w"> </span>src/geneweaver<span class="w"> </span>tests<span class="w"> </span>--fix
+black<span class="w"> </span>src/geneweaver<span class="w"> </span>tests
+pytest<span class="w"> </span>tests
+</code></pre></div></p>
 
 
 
