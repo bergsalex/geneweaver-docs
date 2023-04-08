@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pre-requisites" class="md-skip">
+        <a href="#introduction" class="md-skip">
           Skip to content
         </a>
       
@@ -376,6 +376,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pre-requisites" class="md-nav__link">
     Pre-requisites
   </a>
@@ -391,8 +398,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#container-image-recommended" class="md-nav__link">
-    Container Image (Recommended)
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-docker-hub" class="md-nav__link">
+    From Docker Hub
   </a>
   
 </li>
@@ -849,6 +863,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pre-requisites" class="md-nav__link">
     Pre-requisites
   </a>
@@ -864,8 +885,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#container-image-recommended" class="md-nav__link">
-    Container Image (Recommended)
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-docker-hub" class="md-nav__link">
+    From Docker Hub
   </a>
   
 </li>
@@ -909,22 +937,46 @@
 
   <h1>Running Tools Locally</h1>
 
-<p>Geneweaver is designed to allow you to run the analysis tools on your local computer. </p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>If you a purely a researcher, you might find that the integrated tools in the
-<a href="https://www.geneweaver.org">web application</a> are sufficient for your needs.</p>
+<p>If you a researcher, you will find that the integrated tools in the
+<a href="https://www.geneweaver.org">web application</a> are the most convenient way to run
+the analysis tools.</p>
 </div>
+<h2 id="introduction">Introduction</h2>
+<p>Geneweaver is designed to allow you to run the analysis tools on your local computer.
+This pattern allows for developers to easily get started on tool development, and 
+allows analysis tools to be delivered as independent research products in their own
+right.</p>
+<p>Running tools locally can also be useful if you want to run the tools on a large 
+dataset, or if you want to run the tools on a dataset that is not available on the web 
+application. However, the web application will almost always be the most convenient way 
+to use the tools for most users, even with large datasets.</p>
 <h2 id="pre-requisites">Pre-requisites</h2>
 <p>To run any of the tools, you will need to have access to data that you want to analyze.</p>
 <p>In the examples below, we will utilize the 
 <a href="../command-line-interface/">Command Line Interface</a> to provide data to the tools.</p>
 <h2 id="installation">Installation</h2>
-<h3 id="container-image-recommended">Container Image (Recommended)</h3>
-<p>Each tool that is available to be run locally is available as a container image. </p>
-<p>The container images are available on <a href="https://hub.docker.com/u/geneweaver">Docker Hub</a>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Container Image (Recommended)</label><label for="__tabbed_1_2">From Source</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The recommended way to run the tools locally is to use the container images that are 
+available on <a href="https://hub.docker.com/u/geneweaver">Docker Hub</a>.</p>
+<h3 id="requirements">Requirements</h3>
+<p>To run the tools locally, you will need to have <a href="https://www.docker.com/">Docker</a> 
+installed.</p>
+<h3 id="from-docker-hub">From Docker Hub</h3>
+</div>
+<div class="tabbed-block">
+<p>To run the tools locally, you will need to download the source code for the specific
+tool that you want to run, and then install the dependencies for that tool. Each 
+tool has its own repository, and each repository has its own documentation.</p>
 <h3 id="from-source">From Source</h3>
-<p>Tools can also </p>
+<p>```bash
+git clone</p>
+</div>
+</div>
+</div>
 <h2 id="usage">Usage</h2>
 <p>The specific usage of each tool will vary by tool, but each follows a similar pattern.</p>
 
