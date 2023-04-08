@@ -72,6 +72,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#architecture-overview" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -463,9 +468,85 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Package Based Architecture
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Package Based Architecture
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-overview" class="md-nav__link">
+    Architecture Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motivation-for-package-based-architecture" class="md-nav__link">
+    Motivation for Package Based Architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="Motivation for Package Based Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modularity-and-flexibility" class="md-nav__link">
+    Modularity and Flexibility
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reusability" class="md-nav__link">
+    Reusability
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collaboration" class="md-nav__link">
+    Collaboration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -774,6 +855,68 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-overview" class="md-nav__link">
+    Architecture Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motivation-for-package-based-architecture" class="md-nav__link">
+    Motivation for Package Based Architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="Motivation for Package Based Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modularity-and-flexibility" class="md-nav__link">
+    Modularity and Flexibility
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reusability" class="md-nav__link">
+    Reusability
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collaboration" class="md-nav__link">
+    Collaboration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -792,10 +935,58 @@
 
   <h1>Package Based Architecture</h1>
 
-<p>GeneWeaver utilized a package based architecture to allow for the development of new
-analysis tools and data types without requiring changes to the core GeneWeaver codebase.</p>
-<p>The GeneWeaver project is composed of several python packages that are used to build the
+<p>GeneWeaver utilizes a package based architecture to allow for the development of new
+analysis tools and data types without requiring changes to the core GeneWeaver codebase.
+The GeneWeaver project is composed of several python packages that are used to build the
 GeneWeaver web application. These packages are also available for use in other projects.</p>
+<p>This page describes the GeneWeaver package based architecture, and provides an overview
+of why this architecture was chosen for the GeneWeaver project.</p>
+<h2 id="architecture-overview">Architecture Overview</h2>
+<p>A  package-based architecture is a software design approach in which the functionality 
+of an application is divided into separate modules, or packages, each of which provides 
+a specific set of features or services. These packages can be thought of as 
+self-contained units of code that can be developed and maintained independently of one 
+another, and can be combined and reused to build larger, more complex systems.</p>
+<p>In a package-based architecture, each package typically has a well-defined interface or 
+API (application programming interface), which defines how other packages can interact 
+with it. This interface provides a clear separation of concerns, allowing developers to 
+focus on the specific functionality provided by each package, without having to worry 
+about the details of how other packages are implemented.</p>
+<p>One of the main benefits of a package-based architecture is modularity. By dividing an 
+application into separate packages, developers can more easily manage the complexity of 
+the code, and can develop and maintain each package independently of the others. This 
+can also make it easier to reuse code between projects, since individual packages can 
+be easily extracted and reused as needed.</p>
+<h3 id="motivation-for-package-based-architecture">Motivation for Package Based Architecture</h3>
+<p>The package based architecture was chosen for the Geneweaver project so that it remains 
+flexible, modular, and scalable over time, while also making it easier to manage and 
+maintain the complexity of the codebase.</p>
+<h4 id="modularity-and-flexibility">Modularity and Flexibility</h4>
+<p>A package-based architecture provides a modular design that makes it easier to manage 
+and maintain the complexity of the codebase. Geneweaver includes a range of complex 
+algorithms, processes and data structures, and dividing the application into separate 
+packages allows developers to focus on developing and maintaining each package 
+independently of the others. This helps ensure that the application remains stable 
+and scalable over time.</p>
+<h4 id="reusability">Reusability</h4>
+<p>A package-based architecture promotes code reuse, which saves time and effort during 
+development. In a scientific application like Geneweaver, there is a need to reuse 
+certain algorithms, processes and data structures across different parts of the 
+application, and a package-based architecture makes this process easy.</p>
+<h4 id="collaboration">Collaboration</h4>
+<p>A package-based architecture makes it easier for developers to work collaboratively 
+on the Geneweaver. By dividing the code into separate packages, developers can work 
+on different parts of the application independently, without having to worry about 
+conflicts or dependencies on other parts of the codebase.</p>
+<h4 id="testing">Testing</h4>
+<p>A package-based architecture makes it easier to test the application. By dividing the
+application into separate packages, developers can test each package independently of
+the others, which makes it easier to write tests, and easier to identify and fix bugs.</p>
+<div class="admonition tip">
+<p class="admonition-title">Available Packages</p>
+<p>A complete reference of the available packages can be found in the 
+<a href="/reference/available-packages">Available Packages</a> section.</p>
+</div>
 
 
 
