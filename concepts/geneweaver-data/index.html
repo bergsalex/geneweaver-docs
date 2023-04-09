@@ -72,6 +72,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#geneset-tiers" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -449,9 +454,45 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          External Source Data
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         External Source Data
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#geneset-tiers" class="md-nav__link">
+    Geneset Tiers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -658,6 +699,10 @@
         
           
         
+          
+        
+          
+        
       
       
         
@@ -702,6 +747,34 @@
     <li class="md-nav__item">
       <a href="../../reference/available-tools/" class="md-nav__link">
         Available Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/data-model/" class="md-nav__link">
+        Data Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/geneset-tiers/" class="md-nav__link">
+        GeneSet Tiers
       </a>
     </li>
   
@@ -774,6 +847,28 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#geneset-tiers" class="md-nav__link">
+    Geneset Tiers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -793,12 +888,28 @@
   <h1>External Source Data</h1>
 
 <p>GeneWeaver utilizes several external data sources to provide users with a rich set of 
-genomic features and gene associations. These data sources include:</p>
+genomic features and gene associations. To help users easily identify different types of
+data, we have assigned each data source to one of five tiers.</p>
+<h2 id="geneset-tiers">Geneset Tiers</h2>
+<p>GeneWeaver contains publicly available sets of genes annotated to structured 
+vocabularies and ontologies that are assigned Tier I, or public resource data. Other 
+sets of genes, such as MeSH term-to-gene annotations, are derived from the processing 
+of public sources and attributed to Tier II. In the case of MeSH, we take advantage of 
+NCBI’s gene-to-Pubmed and Pubmed-to-mesh files to produce sets of genes annotated 
+through their transitive associations.</p>
+<p>These data sources include:</p>
 <ul>
 <li><a href="http://www.ensembl.org/index.html">Ensembl</a></li>
 <li><a href="http://www.ncbi.nlm.nih.gov/">NCBI</a></li>
-<li></li>
 </ul>
+<h2 id="_1"></h2>
+<p>In genomics research, there are different types of gene and microarray identifiers because the same gene can be referred to by different names or IDs, depending on the context or the source of the information. This can create confusion and make it difficult to compare and integrate data from different sources.</p>
+<p>Here are a few reasons why there are different types of gene and microarray identifiers:</p>
+<p>Historical reasons: The naming and annotation of genes has evolved over time, and different naming conventions have been used by different researchers and databases. As a result, a given gene may have multiple names or IDs that have been used in different contexts.</p>
+<p>Genome annotation updates: As new information becomes available about the function and structure of genes, the genome annotations may be updated to reflect this new information. This can result in changes to the gene names or IDs used to refer to particular genes.</p>
+<p>Platform-specific differences: Microarray platforms can differ in their design and layout, which can affect the way genes are represented on the microarray. This can lead to different probe IDs or other identifiers being used to refer to the same gene across different microarray platforms.</p>
+<p>Species-specific differences: Gene and microarray identifiers can also differ between different species, since different organisms may have different sets of genes or different naming conventions for those genes.</p>
+<p>To address these challenges, researchers and bioinformaticians have developed tools and databases that can help to map between different gene and microarray identifiers, allowing researchers to integrate data from different sources and compare results across different platforms and species.</p>
 
 
 

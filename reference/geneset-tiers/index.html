@@ -9,13 +9,17 @@
       
       
       
+        <link rel="prev" href="../data-model/">
+      
+      
+        <link rel="next" href="../contributing-guide/">
       
       <link rel="icon" href="../../assets/GW2-logo.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.13">
     
     
       
-        <title>Contributing to packages - GeneWeaver</title>
+        <title>GeneSet Tiers - GeneWeaver</title>
       
     
     
@@ -96,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Contributing to packages
+              GeneSet Tiers
             
           </span>
         </div>
@@ -270,7 +274,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">Getting Started</a>
+          <a href="../../getting-started/">Getting Started</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -293,7 +297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../foundational-concepts/" class="md-nav__link">
+      <a href="../../getting-started/foundational-concepts/" class="md-nav__link">
         Foundational Concepts
       </a>
     </li>
@@ -307,7 +311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../web-application/" class="md-nav__link">
+      <a href="../../getting-started/web-application/" class="md-nav__link">
         Web Application
       </a>
     </li>
@@ -321,7 +325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../command-line-interface/" class="md-nav__link">
+      <a href="../../getting-started/command-line-interface/" class="md-nav__link">
         Command Line Interface
       </a>
     </li>
@@ -335,7 +339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../running-tools-locally/" class="md-nav__link">
+      <a href="../../getting-started/running-tools-locally/" class="md-nav__link">
         Running Tools Locally
       </a>
     </li>
@@ -617,21 +621,27 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
         
           
             
+          
+        
+          
+        
           
         
           
@@ -649,7 +659,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../reference/">Reference</a>
+          <a href="../">Reference</a>
           
             <label for="__nav_5">
               <span class="md-nav__icon md-icon"></span>
@@ -657,7 +667,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Reference
@@ -672,7 +682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/available-packages/" class="md-nav__link">
+      <a href="../available-packages/" class="md-nav__link">
         Available Packages
       </a>
     </li>
@@ -686,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/available-tools/" class="md-nav__link">
+      <a href="../available-tools/" class="md-nav__link">
         Available Tools
       </a>
     </li>
@@ -700,7 +710,43 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/contributing-guide/" class="md-nav__link">
+      <a href="../data-model/" class="md-nav__link">
+        Data Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        GeneSet Tiers
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing-guide/" class="md-nav__link">
         Contributing Guide
       </a>
     </li>
@@ -714,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/development-guide/" class="md-nav__link">
+      <a href="../development-guide/" class="md-nav__link">
         Development Guide
       </a>
     </li>
@@ -728,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/restful-api/" class="md-nav__link">
+      <a href="../restful-api/" class="md-nav__link">
         ReST API
       </a>
     </li>
@@ -776,9 +822,41 @@
   
 
 
-  <h1>Contributing to packages</h1>
+  <h1>GeneSet Tiers</h1>
 
-
+<p>GeneSet tiers 🥇🥈🥉🌱🔒 are used to provide an easily recognizable and intuitive way 
+for users to understand the quality and reliability of the data in a geneset. The 
+following table provides a reference description of each tier.</p>
+<table>
+<thead>
+<tr>
+<th>Geneset Tier</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🥇<strong>Tier I</strong><br/>Public Resource Data</td>
+<td>Tier I data are professionally curated into another major database and are imported into GeneWeaver,which ensures consistency of metadata. Resource grade data is updated on a six-month cycle. These include: gene annotations to KEGG, MP and GO, curated functional associations in Neuroinformatics Framework, and Comparative Toxicogenomics Database.</td>
+</tr>
+<tr>
+<td>🥈<strong>Tier II</strong><br/>Machine-Generated from public sources</td>
+<td>Tier II data are computationally generated from data in public sources. These include empirical data obtained from public sources and their associated analytical tools, e.g. bulk analysis of gene co-expression to phenotypes across mouse strains from GeneNetwork.org, or QTL positional candidates from MGI. In contrast to Tier I in which the individual gene annotations to function are manually curated, Tier II includes machine generated gene annotations to functions from curated experimental data. GeneWeaver curators examine data and metadata.</td>
+</tr>
+<tr>
+<td>🥉<strong>Tier III</strong><br/>Human-Curated Data</td>
+<td>Tier III data are directly entered or reviewed by a professional curator for redundancy with existing records and adherence to documentation standards. Users who submit data under Tier IV have the option of sharing their data to the public. These data will be marked provisional until reviewed by the curator for data entry errors, compliance to metadata standards and redundancy with existing data. The submitter of the data will have the opportunity to approve the curators modifications to them prior to upgrade to Tier III status. For some research areas, a professional curator has identified and entered gene expression, quantitative trait locus and genomewide association studies (GWAS). Where possible, the curator has obtained results directly from the study authors, supplements or data repositories such as GEO, in addition to the often highly-filtered set of results reported in publications.</td>
+</tr>
+<tr>
+<td>🌱<strong>Tier IV</strong><br/>Submitted to Public-Provisional</td>
+<td>Tier IV consists of user submitted data that has been shared to the public prior to review. This data is indicated as provisional, but can be used in all analyses. Curatorial review is required to remove the provisional label.</td>
+</tr>
+<tr>
+<td>🔒<strong>Tier V</strong><br/>Private User and Group Data, Uncurated</td>
+<td>Data in user accounts that is assigned private or group level access is confidential, is not exposed to analyses by users outside of the group to whom it is shared, and is therefore not reviewed by the professional curator.</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -797,6 +875,42 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../data-model/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Data Model" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Previous
+                </span>
+                Data Model
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../contributing-guide/" class="md-footer__link md-footer__link--next" aria-label="Next: Contributing Guide" rel="next">
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Next
+                </span>
+                Contributing Guide
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
