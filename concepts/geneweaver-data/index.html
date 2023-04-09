@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../geneweaver-data-model/">
+        <link rel="prev" href="../genes-and-genesets/">
       
       
-        <link rel="next" href="../package-based-architecture/">
+        <link rel="next" href="../geneweaver-data-model/">
       
       <link rel="icon" href="../../assets/GW2-logo.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.13">
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#geneset-tiers" class="md-skip">
+        <a href="#background" class="md-skip">
           Skip to content
         </a>
       
@@ -431,20 +431,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../geneweaver-data-model/" class="md-nav__link">
-        Geneweaver Data Model
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -477,15 +463,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#geneset-tiers" class="md-nav__link">
-    Geneset Tiers
+  <a href="#background" class="md-nav__link">
+    Background
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    
+  <a href="#geneweavers-solution" class="md-nav__link">
+    GeneWeaver's Solution
   </a>
   
 </li>
@@ -494,6 +480,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geneweaver-data-model/" class="md-nav__link">
+        Geneweaver Data Model
+      </a>
     </li>
   
 
@@ -854,15 +854,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#geneset-tiers" class="md-nav__link">
-    Geneset Tiers
+  <a href="#background" class="md-nav__link">
+    Background
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    
+  <a href="#geneweavers-solution" class="md-nav__link">
+    GeneWeaver's Solution
   </a>
   
 </li>
@@ -888,28 +888,59 @@
   <h1>External Source Data</h1>
 
 <p>GeneWeaver utilizes several external data sources to provide users with a rich set of 
-genomic features and gene associations. To help users easily identify different types of
-data, we have assigned each data source to one of five tiers.</p>
-<h2 id="geneset-tiers">Geneset Tiers</h2>
-<p>GeneWeaver contains publicly available sets of genes annotated to structured 
-vocabularies and ontologies that are assigned Tier I, or public resource data. Other 
-sets of genes, such as MeSH term-to-gene annotations, are derived from the processing 
-of public sources and attributed to Tier II. In the case of MeSH, we take advantage of 
-NCBI’s gene-to-Pubmed and Pubmed-to-mesh files to produce sets of genes annotated 
-through their transitive associations.</p>
+genomic features and gene associations. </p>
 <p>These data sources include:</p>
 <ul>
 <li><a href="http://www.ensembl.org/index.html">Ensembl</a></li>
-<li><a href="http://www.ncbi.nlm.nih.gov/">NCBI</a></li>
+<li><a href="https://www.ncbi.nlm.nih.gov/Web/Search/entrezfs.html">Entrez</a></li>
+<li><a href="https://ncbiinsights.ncbi.nlm.nih.gov/tag/unigene/">UniGene</a></li>
+<li><a href="https://www.informatics.jax.org/">MGI</a></li>
+<li><a href="https://www.genenames.org/">HGNC</a></li>
+<li><a href="https://rgd.mcw.edu/">RGD</a></li>
+<li><a href="https://zfin.org/">ZFIN</a></li>
+<li><a href="https://flybase.org/">FlyBase</a></li>
+<li><a href="https://wormbase.org/">Wormbase</a></li>
+<li><a href="https://www.yeastgenome.org/">SGD</a></li>
+<li><a href="http://www.mirbase.org/">miRBase</a></li>
+<li><a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-10-S2-S5">CGNC</a></li>
 </ul>
-<h2 id="_1"></h2>
-<p>In genomics research, there are different types of gene and microarray identifiers because the same gene can be referred to by different names or IDs, depending on the context or the source of the information. This can create confusion and make it difficult to compare and integrate data from different sources.</p>
-<p>Here are a few reasons why there are different types of gene and microarray identifiers:</p>
-<p>Historical reasons: The naming and annotation of genes has evolved over time, and different naming conventions have been used by different researchers and databases. As a result, a given gene may have multiple names or IDs that have been used in different contexts.</p>
-<p>Genome annotation updates: As new information becomes available about the function and structure of genes, the genome annotations may be updated to reflect this new information. This can result in changes to the gene names or IDs used to refer to particular genes.</p>
-<p>Platform-specific differences: Microarray platforms can differ in their design and layout, which can affect the way genes are represented on the microarray. This can lead to different probe IDs or other identifiers being used to refer to the same gene across different microarray platforms.</p>
-<p>Species-specific differences: Gene and microarray identifiers can also differ between different species, since different organisms may have different sets of genes or different naming conventions for those genes.</p>
-<p>To address these challenges, researchers and bioinformaticians have developed tools and databases that can help to map between different gene and microarray identifiers, allowing researchers to integrate data from different sources and compare results across different platforms and species.</p>
+<h2 id="background">Background</h2>
+<p>Why bother with all these external data sources? Why not just use one?</p>
+<p>In genomics research, there are different types of gene and microarray identifiers 
+because the same gene can be referred to by different names or IDs, depending on the 
+context or the source of the information. This can happen even for genomic features 
+within the same species! All these different identifiers can create confusion and make 
+it difficult to compare and integrate data from different sources.</p>
+<p>Why are there so many different identifiers, you ask? There are a multitude of reasons,
+some of which are historical, some of which are technical, and some of which inherent to
+biology. </p>
+<p>A given gene may have multiple names or IDs that have been used in different 
+contexts as a result of how naming and annotation has evolved over time. It also can be
+the case that different databases just used different conventions. Annotations and
+naming conventions are also updated as new information about the function and structure 
+of genes becomes available.</p>
+<p>Genotype platforms, the methods or tool used to identify and detect genetic variations,
+can differ in their design and layout, which can affect the way genes are represented.
+This can lead to different probe IDs or other identifiers being used to refer to the 
+same genomic features on different platforms.</p>
+<p>Genomic feature identifiers can also differ between different species, since different 
+organisms have different sets of genes and thus different naming conventions for those 
+genes. Even if the same identifier is used across species, it may not refer to the
+same genomic feature, and the genomic feature itself might have entirely different 
+function. </p>
+<h2 id="geneweavers-solution">GeneWeaver's Solution</h2>
+<p>GeneWeaver solves this problem by integrating data from multiple sources (listed above)
+and mapping all the different identifiers to a single, unified set of internal 
+identifiers.</p>
+<p>This allows researchers to upload data from different sources to the same platform, and
+allows tools to operate of data from different sources without having to worry about
+the differences in the identifiers used by those sources.</p>
+<p>Geneweaver also uses homology information to map paralogs and orthologs (collectively
+knows as homologs) across and within species. This allows researchers to perform 
+cross-species analysis, and to identify conserved and divergent biological functions.</p>
+<p>This concept is explained in more detail in the 
+<a href="../geneweaver-data-model/">Geneweaver Data Model</a> concepts page, and in the
+<a href="/reference/data-model">Data model</a> reference page.</p>
 
 
 
@@ -933,7 +964,7 @@ through their transitive associations.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../geneweaver-data-model/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Geneweaver Data Model" rel="prev">
+          <a href="../genes-and-genesets/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Genes and GeneSets" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -942,20 +973,20 @@ through their transitive associations.</p>
                 <span class="md-footer__direction">
                   Previous
                 </span>
-                Geneweaver Data Model
+                Genes and GeneSets
               </div>
             </div>
           </a>
         
         
           
-          <a href="../package-based-architecture/" class="md-footer__link md-footer__link--next" aria-label="Next: Package Based Architecture" rel="next">
+          <a href="../geneweaver-data-model/" class="md-footer__link md-footer__link--next" aria-label="Next: Geneweaver Data Model" rel="next">
             <div class="md-footer__title">
               <div class="md-ellipsis">
                 <span class="md-footer__direction">
                   Next
                 </span>
-                Package Based Architecture
+                Geneweaver Data Model
               </div>
             </div>
             <div class="md-footer__button md-icon">
