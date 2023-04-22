@@ -72,6 +72,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#postgresql-rdbms" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -554,9 +559,72 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Running a Local Database
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Running a Local Database
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#postgresql-rdbms" class="md-nav__link">
+    PostgreSQL RDBMS
+  </a>
+  
+    <nav class="md-nav" aria-label="PostgreSQL RDBMS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#postgresql-setup" class="md-nav__link">
+    PostgreSQL Setup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloads" class="md-nav__link">
+    Downloads
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -612,7 +680,7 @@
   
     <li class="md-nav__item">
       <a href="../creating-a-new-documentation-site/" class="md-nav__link">
-        Creating a New Documentation Site
+        Creating Documentation Sites
       </a>
     </li>
   
@@ -646,6 +714,8 @@
         
           
             
+          
+        
           
         
           
@@ -708,6 +778,20 @@
     <li class="md-nav__item">
       <a href="../../reference/available-tools/" class="md-nav__link">
         Available Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/scientific-workflows/" class="md-nav__link">
+        Scientific Workflows
       </a>
     </li>
   
@@ -822,6 +906,55 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#postgresql-rdbms" class="md-nav__link">
+    PostgreSQL RDBMS
+  </a>
+  
+    <nav class="md-nav" aria-label="PostgreSQL RDBMS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#postgresql-setup" class="md-nav__link">
+    PostgreSQL Setup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloads" class="md-nav__link">
+    Downloads
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -840,31 +973,111 @@
 
   <h1>Running a Local Database</h1>
 
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Researchers 🔬</label><label for="__tabbed_1_2">Educators &amp; Students 📚</label><label for="__tabbed_1_3">Software Developers 💻</label></div>
+<p>Geneweaver provides a subset of the data in the GeneWeaver database to make development
+against the database easier. The data in the local database is a subset of the data in the
+GeneWeaver web application database. </p>
+<div class="admonition danger">
+<p class="admonition-title">Out Of Date</p>
+<p>The database behind the geneweaver web application is updated regularly to stay
+in sync with external data sources. </p>
+<p>While local database is updated periodically to reflect these changes, it should be
+expected that the local database is <strong>significantly</strong> out of date with respect to 
+the web application database.</p>
+<p>You should also not expect any regularity in the frequency of updates to the local
+database, as is expected with the web application database.</p>
+</div>
+<h2 id="postgresql-rdbms">PostgreSQL RDBMS</h2>
+<p>The Geneweaver database is designed to be run on the 
+<a href="https://www.postgresql.org/">PostgreSQL</a> RDBMS. You will need to install PostgreSQL
+version 11 to run the database. The Geneweaver team is experimenting with higher 
+versions of PostgreSQL, but we have not yet verified compatability with versions higher 
+than 11.</p>
+<div class="admonition tip">
+<p class="admonition-title">Postgress.app</p>
+<p>If you are developing on MacOS, you can use <a href="https://postgresapp.com/">Postgres.app</a>
+to install PostgreSQL, just make sure to download a version that includes 
+PostgreSQL 11.</p>
+</div>
+<h3 id="postgresql-setup">PostgreSQL Setup</h3>
+<p>You will need to create an empty database for the Geneweaver database. You can do this
+using the <code>createdb</code> command line tool that comes with PostgreSQL. </p>
+<div class="highlight"><pre><span></span><code>createdb geneweaver
+</code></pre></div>
+<p>Optionally, you can also set up users and permissions for the database. For example,
+if you want to create a user named <code>geneweaver</code> with access to the <code>geneweaver</code> 
+database, you can do the following:</p>
+<div class="highlight"><pre><span></span><code>createuser -P geneweaver
+createdb -O geneweaver geneweaver
+</code></pre></div>
+<h2 id="downloads">Downloads</h2>
+<p>The database is available as a schema only, or as both schema and data. Most users will
+want to download the schema and data, but if you are only interested in the schema, you
+can download that separately.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Schema &amp; Data</label><label for="__tabbed_1_2">Schema Only</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="admonition tip try the web application">
-<p class="admonition-title">Tip</p>
-<p>The best way to access Geneweaver data for researchers is to use the web 
-application.</p>
+<p>The schema &amp; data download is available as a single file, <code>geneweaver.sql</code>.</p>
+<p>You can either download the file directly from 
+<a href="https://storage.googleapis.com/gwdb-public/geneweaver.sql">this link</a>,
+or you can use the <code>wget</code> or <code>curl</code> command line tool to download the file.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">wget</label><label for="__tabbed_2_2">curl</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>wget https://storage.googleapis.com/gwdb-public/geneweaver.sql
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>```commandline
+curl -O https://storage.googleapis.com/gwdb-public/geneweaver.sql</p>
+</div>
+</div>
 </div>
 </div>
 <div class="tabbed-block">
-<div class="admonition tip the web application">
-<p class="admonition-title">Tip</p>
-<p>The best way to access Geneweaver data for researchers is to use the web 
-application.</p>
-</div>
+<p>The schema only download is available as a single file, <code>geneweaver-schema.sql</code>.</p>
+<p>You can either download the file directly from 
+<a href="https://storage.googleapis.com/gwdb-public/geneweaver-schema.sql">this link</a>,
+or you can use the <code>wget</code> or <code>curl</code> command line tool to download the file.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">wget</label><label for="__tabbed_3_2">curl</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>wget https://storage.googleapis.com/gwdb-public/geneweaver-schema.sql
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="admonition tip try the web application">
-<p class="admonition-title">Tip</p>
-<p>The best way to access Geneweaver data for researchers is to use the web 
-application.</p>
+<div class="highlight"><pre><span></span><code>curl -O https://storage.googleapis.com/gwdb-public/geneweaver-schema.sql
+</code></pre></div>
 </div>
 </div>
 </div>
 </div>
+</div>
+</div>
+<h2 id="installation">Installation</h2>
+<p>Once you have downloaded the database, you can install it using the <code>psql</code> command line
+tool that comes with PostgreSQL. Make sure that you specify the name of the database
+that you created in the steps above.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Schema &amp; Data</label><label for="__tabbed_4_2">Schema Only</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>psql -d geneweaver -f geneweaver.sql
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>psql -d geneweaver -f geneweaver-schema.sql
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="verification">Verification</h2>
+<p>First, log into the database using the <code>psql</code> command line tool. If you set up a specifc
+user for the database, you will need to specify the user name and password when logging
+in.</p>
+<div class="highlight"><pre><span></span><code>psql -d geneweaver
+</code></pre></div>
+<p>You can verify that the database was installed correctly by running the following query:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">gene</span><span class="p">;</span>
+</code></pre></div>
 
 
 
